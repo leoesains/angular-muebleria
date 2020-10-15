@@ -9,40 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{mueble1.descripcion}}</td>
-            <td>{{mueble1.material}}</td>
-            <td>{{mueble1.caracteristicas}}</td>
-            <td>{{mueble1.precio}}</td>
-            <td>{{mueble1.stock}}</td>
+        <tr *ngFor="let mueble of muebles" [ngClass]="{'oferta': mueble.oferta}">
+            <td>{{mueble.descripcion}}</td>
+            <td>{{mueble.material}}</td>
+            <td>{{mueble.caracteristicas}}</td>
+            <td>{{mueble.precio | currency}}</td>
+            <td><b class="badge badge-pill badge-danger" *ngIf="mueble.stock == 0">SIN STOCK</b></td>
         </tr>
-        <tr>
-            <td>{{mueble2.descripcion}}</td>
-            <td>{{mueble2.material}}</td>
-            <td>{{mueble2.caracteristicas}}</td>
-            <td>{{mueble2.precio}}</td>
-            <td>{{mueble2.stock}}</td>
-        </tr>
-        <tr>
-            <td>{{mueble3.descripcion}}</td>
-            <td>{{mueble3.material}}</td>
-            <td>{{mueble3.caracteristicas}}</td>
-            <td>{{mueble3.precio}}</td>
-            <td>{{mueble3.stock}}</td>
-        </tr>
-        <tr>
-            <td>{{mueble4.descripcion}}</td>
-            <td>{{mueble4.material}}</td>
-            <td>{{mueble4.caracteristicas}}</td>
-            <td>{{mueble4.precio}}</td>
-            <td>{{mueble4.stock}}</td>
-        </tr>
-        <tr>
-            <td>{{mueble5.descripcion}}</td>
-            <td>{{mueble5.material}}</td>
-            <td>{{mueble5.caracteristicas}}</td>
-            <td>{{mueble5.precio}}</td>
-            <td>{{mueble5.stock}}</td>
-        </tr>
+        
     </tbody>
 </table>
