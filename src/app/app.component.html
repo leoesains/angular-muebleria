@@ -5,31 +5,15 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Contacto</a>
+      <a class="nav-link active" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
       <a class="nav-link" href="#">Quienes Somos</a>
     </div>
   </div>
 </nav>
-<div class="titulo_tabla">
-  <h1>
-    Listado de Muebles
-  </h1>
-</div>
 <div class="conteiner">
-  <div class="row">
-    <div class="col-8">
-      <app-muebles-list></app-muebles-list>
-    </div>
-    <div class="col-4">
-      CARRITO DE COMPRA
-    </div>
-  </div>
-
+  <router-outlet></router-outlet>  
 </div>
-
-
-
 <footer>
-  {{title}} Mitre - Mitre 132 - Rauch
+  {{title}} Mitre - Mitre 132 - (7203) Rauch - Buenos Aires
 </footer>

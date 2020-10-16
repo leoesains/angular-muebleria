@@ -1,14 +1,12 @@
-.titulo_tabla{
-    width: 370px;
-    color: rgb(121, 115, 116);
-    margin-top: 8px;
-}
-
 footer{
     background-color: rgb(194, 188, 188);
     text-align: center;
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: bold;
-    margin-top: 300px;
-}
+    position: absolute;
+    width: 97%;
+    top:95%;
+} 
+
+
 

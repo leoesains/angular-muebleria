@@ -59,7 +59,8 @@ export class MueblesListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  
   upCantidad(mueble: Muebles): void{
     if(mueble.stock > 0){
       mueble.cantidad++;
@@ -75,17 +76,18 @@ export class MueblesListComponent implements OnInit {
   }
 
   changeCantidad(event, mueble: Muebles): void{
+    let stockInicial = mueble.stock + mueble.cantidad;
     if(!(0 <= event.key && event.key <= 9))
       alert("Debe ingresar un valor numérico");
     else{
-      if(event.key <= mueble.stock){
+      if(event.key <= stockInicial){
+        mueble.stock = stockInicial;
         mueble.cantidad = event.key;
-        mueble.stock -= event.key;
+        mueble.stock -= mueble.cantidad;
       }
       else
         mueble.cantidad = mueble.stock;
     }
-    //console.log(event);
   }
 
 }

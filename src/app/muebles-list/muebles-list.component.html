@@ -1,3 +1,8 @@
+<div class="titulo_tabla">
+    <h1>
+      Listado de Muebles
+    </h1>
+</div>
 <table class="table text-center">
     <thead class="thead-dark">
         <tr>
@@ -18,11 +23,14 @@
             <td><b class="badge badge-pill badge-danger" *ngIf="mueble.stock == 0">SIN STOCK</b></td>
             <td>
                 <div class="input-group">
-                    <button class="btn btn-dark btn-sm" (click)="downCantidad(mueble)">-</button>
+                    <button class="btn btn-dark btn-sm centrar" (click)="downCantidad(mueble)">-</button>
                     <input
                     type="text" class="input"
                     [(ngModel)]="mueble.cantidad"
                     (keyup)="changeCantidad($event, mueble)">
+                    <!--<p>{{mueble.cantidad}}</p>
+                    <p>-</p>
+                    <p>{{mueble.stock}}</p>-->
                     <button class="btn btn-dark btn-sm" (click)="upCantidad(mueble)">+</button>
                 </div>
             </td>
