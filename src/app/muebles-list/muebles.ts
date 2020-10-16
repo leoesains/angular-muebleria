@@ -5,4 +5,5 @@ export interface Muebles {
     precio: number;
     stock: number;
     oferta: boolean;
+    cantidad: number;
 }
