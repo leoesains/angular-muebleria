@@ -2,24 +2,8 @@
     background-color: darkseagreen;
 }
 
-.input {
-    max-width: 30px;
-    margin-left: 3px;
-    margin-right: 3px;    
-    border-radius: 5px;
-}
-
-td {
-    vertical-align: middle;
-    background-color: rgb(214, 209, 209, 0.5);
-}
-
 .titulo_tabla{
     width: 370px;
     color: rgb(88, 83, 84);
     margin-top: 8px;
-}
-
-.centrar{
-    margin-left: 30px;
 }

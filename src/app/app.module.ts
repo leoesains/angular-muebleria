@@ -10,6 +10,7 @@ import { MueblesContactoComponent } from './muebles-contacto/muebles-contacto.co
 import { MueblesCarritoComponent } from './muebles-carrito/muebles-carrito.component';
 import { appRoutes } from './app.routes';
 import { RouterModule } from '@angular/router';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     MueblesListComponent,
     MueblesMuebleriaComponent,
     MueblesContactoComponent,
-    MueblesCarritoComponent
+    MueblesCarritoComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

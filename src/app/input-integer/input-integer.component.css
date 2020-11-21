@@ -1,0 +1,16 @@
+
+.input {
+    max-width: 30px;
+    margin-left: 3px;
+    margin-right: 3px;    
+    border-radius: 5px;
+}
+
+td {
+    vertical-align: middle;
+    background-color: rgb(214, 209, 209, 0.5);
+}
+
+.centrar{
+    margin-left: 30px;
+}

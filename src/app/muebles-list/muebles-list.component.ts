@@ -60,34 +60,9 @@ export class MueblesListComponent implements OnInit {
   ngOnInit(): void {
   }
   
+  topeAlcanzado(mensaje: string){
+    alert(mensaje);
+  }
   
-  upCantidad(mueble: Muebles): void{
-    if(mueble.stock > 0){
-      mueble.cantidad++;
-      mueble.stock--;
-    }  
-  }
-
-  downCantidad(mueble: Muebles): void{
-    if(mueble.cantidad > 0){
-      mueble.cantidad--;
-      mueble.stock++;
-    }  
-  }
-
-  changeCantidad(event, mueble: Muebles): void{
-    let stockInicial = mueble.stock + mueble.cantidad;
-    if(!(0 <= event.key && event.key <= 9))
-      alert("Debe ingresar un valor numérico");
-    else{
-      if(event.key <= stockInicial){
-        mueble.stock = stockInicial;
-        mueble.cantidad = event.key;
-        mueble.stock -= mueble.cantidad;
-      }
-      else
-        mueble.cantidad = mueble.stock;
-    }
-  }
 
 }

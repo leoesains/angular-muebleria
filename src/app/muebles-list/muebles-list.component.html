@@ -22,17 +22,7 @@
             <td>{{mueble.precio | currency}}</td>
             <td><b class="badge badge-pill badge-danger" *ngIf="mueble.stock == 0">SIN STOCK</b></td>
             <td>
-                <div class="input-group">
-                    <button class="btn btn-dark btn-sm centrar" (click)="downCantidad(mueble)">-</button>
-                    <input
-                    type="text" class="input"
-                    [(ngModel)]="mueble.cantidad"
-                    (keyup)="changeCantidad($event, mueble)">
-                    <!--<p>{{mueble.cantidad}}</p>
-                    <p>-</p>
-                    <p>{{mueble.stock}}</p>-->
-                    <button class="btn btn-dark btn-sm" (click)="upCantidad(mueble)">+</button>
-                </div>
+                <app-input-integer [(cantidad)]="mueble.cantidad" [tope]="mueble.stock" *ngIf="mueble.stock" (topeAlcanzado)="topeAlcanzado($event)"></app-input-integer>
             </td>
         </tr>
         

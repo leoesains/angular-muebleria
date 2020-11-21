@@ -1,0 +1,5 @@
+<div class="input-group" >
+    <button class="btn btn-dark btn-sm centrar" (click)="downCantidad()">-</button>
+    <input type="text" class="input" [(ngModel)]="cantidad" (keyup)="changeCantidad($event)">
+    <button class="btn btn-dark btn-sm" (click)="upCantidad()">+</button>
+</div>
