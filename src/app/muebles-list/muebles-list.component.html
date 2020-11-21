@@ -22,7 +22,10 @@
             <td>{{mueble.precio | currency}}</td>
             <td><b class="badge badge-pill badge-danger" *ngIf="mueble.stock == 0">SIN STOCK</b></td>
             <td>
-                <app-input-integer [(cantidad)]="mueble.cantidad" [tope]="mueble.stock" *ngIf="mueble.stock" (topeAlcanzado)="topeAlcanzado($event)"></app-input-integer>
+                <div>
+                    <app-input-integer [(cantidad)]="mueble.cantidad" [tope]="mueble.stock" *ngIf="mueble.stock" (topeAlcanzado)="topeAlcanzado($event)"></app-input-integer>
+                    <button class="btn boton" *ngIf="mueble.stock" (topeAlcanzado)="topeAlcanzado($event)" (click)="agregarACarrito(mueble)">AGREGAR</button>
+                </div>
             </td>
         </tr>
         

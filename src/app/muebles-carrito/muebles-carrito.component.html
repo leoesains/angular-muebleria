@@ -1,1 +1,18 @@
-<h3>CARRITO DE COMPRA</h3>
+<div class="titulo_carrito">
+    <h1>Carrito de Compras</h1>
+</div>
+<table class="table text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th>Descripción</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mueble of carritoDeCompras$ | async">
+            <td>{{mueble.descripcion}}</td>
+            <td>{{mueble.cantidad}}</td>
+        </tr>
+    </tbody>
+</table>
+

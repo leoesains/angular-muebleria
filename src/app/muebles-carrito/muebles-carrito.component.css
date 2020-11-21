@@ -1,0 +1,16 @@
+.titulo_carrito{
+    margin-top: 8px;
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+td{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white; 
+}

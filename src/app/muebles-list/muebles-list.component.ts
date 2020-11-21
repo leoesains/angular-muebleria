@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoComprasService } from '../carrito-compras.service';
 import { Muebles } from './muebles';
 
 @Component({
@@ -10,7 +11,7 @@ export class MueblesListComponent implements OnInit {
 
   muebles: Muebles[] = [
   {
-    descripcion: "Cama",
+    descripcion: "Cama Simple",
     material: "Pino",
     caracteristicas: "1 plaza",
     precio: 1500,
@@ -19,7 +20,7 @@ export class MueblesListComponent implements OnInit {
     cantidad: 0
   },
   {
-    descripcion: "Cama",
+    descripcion: "Cama Doble",
     material: "Pino",
     caracteristicas: "2 plaza",
     precio: 2599,
@@ -55,12 +56,18 @@ export class MueblesListComponent implements OnInit {
     cantidad: 0
   },
 ];
-  constructor() { }
+  //Inyección de dependencia. Inyección del Servicio del Carrito de Compras
+  constructor(private carrito:CarritoComprasService) { }
 
   ngOnInit(): void {
   }
   
-  topeAlcanzado(mensaje: string){
+  agregarACarrito(mueble): void {
+    this.carrito.agregarACarrito(mueble);
+    mueble.stock -= mueble.cantidad;
+    mueble.cantidad = 0;
+  }
+  topeAlcanzado(mensaje: string) {
     alert(mensaje);
   }
   

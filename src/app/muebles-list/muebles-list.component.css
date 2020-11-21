@@ -1,9 +1,31 @@
+td{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white; 
+ }
+
 .oferta {
-    background-color: darkseagreen;
+    background-color: #9bc49b;
+    background-color: rgb(7, 121, 121, 0.2);
 }
 
 .titulo_tabla{
-    width: 370px;
-    color: rgb(88, 83, 84);
     margin-top: 8px;
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.boton{
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 100px;
+    margin-top: 5px;
+    padding: 0px;
+    font-weight: bold;
 }
