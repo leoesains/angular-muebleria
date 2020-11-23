@@ -1,5 +1,6 @@
 body {
-    background-image: url(madera-de-pino.jpg);
+    background-color: rgb(99, 66, 6, 0.5);
+    /*background-image: url(madera-de-pino.jpg);*/
     background-size: 100vw 100vh; 
     background-attachment: fixed;
 }
